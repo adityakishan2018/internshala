@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="js_file.js"></script>
+    
+    
+    <style>
+    
+    .main{
+	min-width: 100%;
+	height: 98%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: -150%;
+	position: absolute;
+	background: #000;
+	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+	z-index: 2;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+.main:target{
+	margin-top: 0%;
+	background-color: #ffcb00;
+    
+    </style>
+
+</head>
+<body>
+    
+    <button class="button button4" onclick="window.location.href='#section1';">Start</button>
+<div class="main" id="section1">
+    
+    <div class="full-screen">
+    <video src="Workaholic.mp4" autoplay muted loop></video>
+    </div>
+  
+    <div class="main_content">
+    
+        <h1>Enquiry Form  <img src="marking.png"> </h1>
+        
+  
+        <button class="button button4" onclick="window.location.href='#section2';">Start</button>
+    
+    </div>
+  
+  
+  
+  
+</div>
+
+<div class="main" id="section2">
+    
+  
+    <div class="main_content">
+    
+         <h2>Name <img src="name.png"></h2>
+  <input type="text" id="txt" onkeyup="manage(this)" />
+    <input class="button button4" type="button" id="btSubmit" value="Next"onclick="window.location.href='#section3';" disabled />
+    
+    </div>
+   
+    
+
+  
+</div>
+
+<div class="main" id="section3">
+    
+    
+    <div class="main_content">
+        
+    <h2>Date of Birth <img src="cake%20(1).png"> </h2>
+  <label for="birthday"></label>
+  <input type="date" id="birthday" name="birthday" onkeyup="validateForm()"/>
+        
+        
+         <input class="button button4" type="button" id="btSubmit3" value="Next"onclick="window.location.href='#section4';" />
+    
+        
+    </div>
+    
+  
+</div>
+
+<div class="main" id="section4">
+    
+    <div class="main_content">
+    
+    <h2>Achievments <img src="trophy.png"></h2>
+  <textarea rows="4" cols="50" id="txt4" onkeyup="manage(this)" >
+</textarea>
+    <input class="button button4" type="button" id="btSubmit4" value="Next"onclick="window.location.href='#section5';" disabled />
+        
+    </div>
+         
+  
+  
+</div>
+
+<div class="main" id="section5">
+    
+    
+    <div class="main_content">
+    
+        <h2>Family Members <img src="family.png"></h2>
+    
+<form>
+  <input type="checkbox" class="number" value="One">No one<br>
+  <input type="checkbox" class="number" value="Two">Father<br>
+  <input type="checkbox" class="number" value="Three">Mother<br>
+  <input type="checkbox" class="number" value="Four">Brother<br>
+  <input type="checkbox" class="number" value="Five">Sister<br>
+  
+  
+   <input class="button button4" onclick="window.location.href='#section6';"type="button" id="btn"
+    value="Next" disabled />
+</form>
+    
+    
+    </div>
+  
+  
+
+
+</div>
+
+<div class="main" id="section6">
+    
+    <div class="main_content">
+    
+        <button class="button button4" onclick="window.location.href='#section1';">Submit</button>
+    
+    </div>
+  
+  
+</div>
+
+
+
+
+<script>
+    
+    $( ".number" ).on( "click", function() {
+  if($( ".number:checked" ).length > 0)
+  {
+    $('#btn').prop('disabled', false);
+  }
+  else
+  {
+    $('#btn').prop('disabled', true);
+  }  
+});
+</script>
+
+   
+</body>
+</html>
